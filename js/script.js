@@ -46,6 +46,17 @@ encBtn.addEventListener("click", () => {
     if(t[i] == "X" || t[i] == "x") out += "$Cw";
     if(t[i] == "Y" || t[i] == "y") out += "#Bx";
     if(t[i] == "Z" || t[i] == "z") out += "%Ay";
+    if(t[i] == "1") out += "__!";
+    if(t[i] == "2") out += "__£";
+    if(t[i] == "3") out += "__$";
+    if(t[i] == "4") out += "__%";
+    if(t[i] == "5") out += "__^";
+    if(t[i] == "6") out += "__&";
+    if(t[i] == "7") out += "__*";
+    if(t[i] == "8") out += "__(";
+    if(t[i] == "9") out += "__)";
+    if(t[i] == "0") out += "__+";
+    if(t[i] == " ") out += "---";
   }
 
   txtOut.value = out;
@@ -82,6 +93,17 @@ decBtn.addEventListener("click", () => {
     if(t.substring(i, i+3) == "$Cw") out += "x";
     if(t.substring(i, i+3) == "#Bx") out += "y";
     if(t.substring(i, i+3) == "%Ay") out += "z";
+    if(t.substring(i, i+3) == "__!") out += "1";
+    if(t.substring(i, i+3) == "__£") out += "2";
+    if(t.substring(i, i+3) == "__$") out += "3";
+    if(t.substring(i, i+3) == "__%") out += "4";
+    if(t.substring(i, i+3) == "__^") out += "5";
+    if(t.substring(i, i+3) == "__&") out += "6";
+    if(t.substring(i, i+3) == "__*") out += "7";
+    if(t.substring(i, i+3) == "__(") out += "8";
+    if(t.substring(i, i+3) == "__)") out += "9";
+    if(t.substring(i, i+3) == "__+") out += "0";
+    if(t.substring(i, i+3) == "---") out += " ";
   }
 
   txtOut.value = out;
