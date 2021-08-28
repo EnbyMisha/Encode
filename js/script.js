@@ -14,8 +14,8 @@ const decBtn = document.getElementById("decode-btn");
 // for output only
 txtOut.disabled = true;
 
-// event listeners
-encBtn.addEventListener("click", () => {
+// time intervals
+const encoder = setInterval(() => {
   const t = txtInp.value;
   let out = "";
 
@@ -49,40 +49,4 @@ encBtn.addEventListener("click", () => {
   }
 
   txtOut.value = out;
-})
-
-decBtn.addEventListener("click", () => {
-  const  t = txtInp.value;
-  let out = "";
-
-  for(let i = 0; i < t.length; i += 3) {
-    if(t.substring(i, i+3) == "#Z_") out += "a";
-    if(t.substring(i, i+3) == "%Ya") out += "b";
-    if(t.substring(i, i+3) == "$Xb") out += "c";
-    if(t.substring(i, i+3) == "#Wc") out += "d";
-    if(t.substring(i, i+3) == "%Vd") out += "e";
-    if(t.substring(i, i+3) == "$Ue") out += "f";
-    if(t.substring(i, i+3) == "#Tf") out += "g";
-    if(t.substring(i, i+3) == "%Sg") out += "h";
-    if(t.substring(i, i+3) == "$Rh") out += "i";
-    if(t.substring(i, i+3) == "#Qi") out += "j";
-    if(t.substring(i, i+3) == "%Pj") out += "k";
-    if(t.substring(i, i+3) == "$Ok") out += "l";
-    if(t.substring(i, i+3) == "#Nl") out += "m";
-    if(t.substring(i, i+3) == "%Mm") out += "n";
-    if(t.substring(i, i+3) == "$Ln") out += "o";
-    if(t.substring(i, i+3) == "#Ko") out += "p";
-    if(t.substring(i, i+3) == "%Jp") out += "q";
-    if(t.substring(i, i+3) == "$Iq") out += "r";
-    if(t.substring(i, i+3) == "#Hr") out += "s";
-    if(t.substring(i, i+3) == "%Gs") out += "t";
-    if(t.substring(i, i+3) == "$Ft") out += "u";
-    if(t.substring(i, i+3) == "#Eu") out += "v";
-    if(t.substring(i, i+3) == "%Dv") out += "w";
-    if(t.substring(i, i+3) == "$Cw") out += "x";
-    if(t.substring(i, i+3) == "#Bx") out += "y";
-    if(t.substring(i, i+3) == "%Ay") out += "z";
-  }
-
-  txtOut.value = out;
-})
+}, 100)
